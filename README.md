@@ -16,6 +16,14 @@ rustup target add wasm32-wasi
 curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | sudo bash -s -- -p /usr/local
 ```
 
+### NOTE MacOS
+Use the following to build wasm32 code.
+
+```
+cargo build --target wasm32-wasip1 --release
+wasmedge target/wasm32-wasip1/release/[name].wasm
+```
+
 ## Examples
 
 This set of examples demonstrate Rust apps that each has a `main()` function and can be started and executed a standalone app, such as a microservice.
